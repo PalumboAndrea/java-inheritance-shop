@@ -8,7 +8,7 @@ public class Shop {
 		
 		System.out.println("\n------------------------------------\n");
 		
-		Smartphone s = new Smartphone ("Iphone 13", "Apple", 1000, 20, 14230, "128 gb");
+		Smartphone s = new Smartphone ("Iphone 13", "Apple", 1000, 20, 14230, 128);
 		System.out.println(s.toString());
 		
 		System.out.println("\n------------------------------------\n");
