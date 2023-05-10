@@ -36,16 +36,16 @@ public class Catalogo {
 					System.out.println("Scrivi il codice IMEI:");
 					int IMEI = sc.nextInt();
 					sc.nextLine();
-					System.out.println("Scrivi la memoria del telefono:");
-					String memoria = sc.nextLine();
+					System.out.println("Scrivi la memoria del telefono (Gb):");
+					int memoria = sc.nextInt();
 					Smartphone s = new Smartphone (nome, marca, prezzo, iva, IMEI, memoria);
 					System.out.println(s.toString());
 					pArr[index] = s;
-					System.out.println("Vuoi: 1. uscire, 2. Inserire un nuovo prodotto");
+					System.out.println("Vuoi: 1. Inserire un nuovo prodotto, 2. Stampa catalogo ed esci");
 					int exit = sc.nextInt();
 					if (exit < 1 || exit > 2) {
 						System.err.println("Scelta non trovata");
-					} else if (exit == 1) {
+					} else if (exit == 2) {
 						System.out.println("Ecco i prodotti che hai aggiunto:");
 						for (int x=0;x<pArr.length;x++) {
 							if (pArr[x] != null) {
@@ -69,6 +69,7 @@ public class Catalogo {
 								return;
 							}
 						}
+						sc.close();
 						return;
 					} else {
 						break;
@@ -76,19 +77,19 @@ public class Catalogo {
 				}
 				
 				case 2: {
-					System.out.println("Scrivi le dimensioni:");
-					String dimensioni = sc.nextLine();
 					sc.nextLine();
+					System.out.println("Scrivi le dimensioni (h x l x p):");
+					String dimensioni = sc.nextLine();
 					System.out.println("Scrivi la proprietà:");
 					String proprietà = sc.nextLine();
 					Televisore t = new Televisore (nome, marca, prezzo, iva, dimensioni, proprietà);
 					System.out.println(t.toString());
 					pArr[index] = t;
-					System.out.println("Vuoi: 1. uscire, 2. Inserire un nuovo prodotto");
+					System.out.println("Vuoi: 1. Inserire un nuovo prodotto, 2. Stampa catalogo ed esci");
 					int exit = sc.nextInt();
 					if (exit < 1 || exit > 2) {
 						System.err.println("Scelta non trovata");
-					} else if (exit == 1) {
+					} else if (exit == 2) {
 						System.out.println("Ecco i prodotti che hai aggiunto:");
 						for (int x=0;x<pArr.length;x++) {
 							if (pArr[x] != null) {
@@ -112,6 +113,7 @@ public class Catalogo {
 								return;
 							}
 						}
+						sc.close();
 						return;
 					} else {
 						break;
@@ -119,19 +121,19 @@ public class Catalogo {
 				}
 				
 				case 3:{
+					sc.nextLine();
 					System.out.println("Scrivi il colore:");
 					String colore = sc.nextLine();
-					sc.nextLine();
 					System.out.println("Scrivi la proprietà:");
 					String proprietà = sc.nextLine();
 					Cuffia c = new Cuffia (nome, marca, prezzo, iva, colore, proprietà);
 					System.out.println(c.toString());
 					pArr[index] = c;
-					System.out.println("Vuoi: 1. uscire, 2. Inserire un nuovo prodotto");
+					System.out.println("Vuoi: 1. Inserire un nuovo prodotto, 2. Stampa catalogo ed esci");
 					int exit = sc.nextInt();
 					if (exit < 1 || exit > 2) {
 						System.err.println("Scelta non trovata");
-					} else if (exit == 1) {
+					} else if (exit == 2) {
 						System.out.println("Ecco i prodotti che hai aggiunto:");
 						for (int x=0;x<pArr.length;x++) {
 							if (pArr[x] != null) {
@@ -155,16 +157,18 @@ public class Catalogo {
 								return;
 							}
 						}
+						sc.close();
 						return;
 					} else {
 						break;
 					}
 				}
+				sc.close();
 			}
-			
 		}
 	}
 	
+	// this was a try it is not used for anything
 	public static void showArray(Prodotto [] array, Smartphone s, Televisore t, Cuffia c) {
 		for (int x=0;x<array.length;x++) {
 			

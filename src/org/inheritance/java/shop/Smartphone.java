@@ -3,10 +3,10 @@ package org.inheritance.java.shop;
 public class Smartphone extends Prodotto {
 	
 	private int codiceIMEI;
-	private String memoria;
+	private int memoria;
 	
 	public Smartphone(String nome, String marca, float prezzo, int iva,
-			int codiceIMEI, String memoria) {
+			int codiceIMEI, int memoria) {
 
 		super(nome, marca, prezzo, iva);
 		setCodiceIMEI(codiceIMEI);
@@ -22,10 +22,10 @@ public class Smartphone extends Prodotto {
 	public void setCodiceIMEI(int codiceIMEI) {
 		this.codiceIMEI = codiceIMEI;
 	}
-	public String getMemoria() {
+	public int getMemoria() {
 		return memoria;
 	}
-	public void setMemoria(String memoria) {
+	public void setMemoria(int memoria) {
 		this.memoria = memoria;
 	}
 	

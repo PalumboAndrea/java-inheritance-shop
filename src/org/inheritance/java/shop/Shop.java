@@ -13,7 +13,7 @@ public class Shop {
 		
 		System.out.println("\n------------------------------------\n");
 		
-		Televisore t = new Televisore ("TV", "Samsung", 300, 20, "120 x 400", "smart");
+		Televisore t = new Televisore ("TV", "Samsung", 300, 20, "120 x 20", "smart");
 		System.out.println(t.toString());
 		
 		System.out.println("\n------------------------------------\n");
